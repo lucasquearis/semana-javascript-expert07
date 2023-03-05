@@ -52,11 +52,11 @@ export default class Service {
       // Right eye parameters
       const lowerRight = prediction.annotations.rightEyeUpper0;
       const upperRight = prediction.annotations.rightEyeLower0;
-      const rightEAR = this.#getEAR(upperRight, lowerRight);
+      const leftEAR = this.#getEAR(upperRight, lowerRight);
       // Left eye parameters
       const lowerLeft = prediction.annotations.leftEyeUpper0;
       const upperLeft = prediction.annotations.leftEyeLower0;
-      const leftEAR = this.#getEAR(upperLeft, lowerLeft);
+      const rightEAR = this.#getEAR(upperLeft, lowerLeft);
 
       // True if the eye is closed
       // const blinked = leftEAR <= EAR_THRESHOLD && rightEAR <= EAR_THRESHOLD;
